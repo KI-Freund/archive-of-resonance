@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impressum & Datenschutz | Science Gem</title>
+    <style>
+        /* --- DESIGN: 3.0 DARK MODE (Strenge & Klarheit) --- */
+        body {
+            background-color: #001f3f; 
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            line-height: 1.6;
+        }
+
+        h1, h2 {
+            color: #ffce1b; /* Warnung/Wichtigkeit in Orange */
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 40px;
+        }
+
+        .container {
+            max-width: 800px; /* Schmaler für bessere Lesbarkeit von Text */
+            width: 90%;
+            margin-bottom: 60px;
+        }
+
+        /* Boxen für die Rechtstexte */
+        .legal-box {
+            background: rgba(255, 255, 255, 0.05);
+            border-left: 4px solid #00cccc; /* Türkise Akzentlinie */
+            padding: 20px 30px;
+            margin-bottom: 30px;
+        }
+
+        a {
+            color: #00cccc;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #ffffff;
+        }
+
+        .back-link {
+            margin-top: 30px;
+            display: inline-block;
+            font-weight: bold;
+            color: #ffce1b;
+        }
+
+        /* Der "Spiegel-Trick" */
+        .email-protector {
+            unicode-bidi: bidi-override;
+            direction: rtl; /* Right-to-Left: Schreibt den Text von rechts nach links */
+            display: inline-block;
+        }
+
+        .minimal-list {
+            list-style-type: disc; /* Klassische runde Punkte (oder ändere es zu 'square') */
+            padding-left: 20px; /* Minimaler, sauberer Einzug */
+            margin: 15px 0; /* Luft zum Textblock davor und danach */
+            line-height: 1.6; /* Übernimmt harmonisch den Abstand der legal.html */
+        }
+
+        .minimal-list li {
+            margin-bottom: 15px; /* WICHTIG: Genug Luft zwischen den langen Rechtstexten */
+            color: #e0e0e0; /* Integriert sich nahtlos in deine restliche Textfarbe */
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <a href="index.html" 
+        onclick="if(history.length > 1) { history.back(); return false; }" 
+        class="back-link">
+        ← ZURÜCK
+    </a>
+
+    <div class="container">
+        
+        <h1>Impressum</h1>
+        <div class="legal-box">
+            <p><strong>Angaben gemäß § 5 DDG & Verantwortung für den Inhalt nach § 18 Abs. 2 MStV</strong></p>
+   
+            <p>
+                Nicole Dieckmann<br>
+                c/o Management 104751<br>
+                Ludwig-Erhard-Str. 18<br>
+                20459 Hamburg
+            </p>
+
+            <p>
+                <strong>Kontakt:</strong><br>
+                Telefon: <span class="email-protector">0483422122394+</span><br> 
+                E-Mail: <span class="email-protector">gro.ia-rof-ytefas@noitamrofni</span>              
+            </p>
+        </div>
+
+
+        <h1>Datenschutzerklärung</h1>
+        <div class="legal-box">
+            <h2>1. Grundprinzip: Keine Überwachung</h2>
+            <p>
+                Der Schutz Ihrer Privatsphäre ist für dieses Projekt nicht nur eine gesetzliche Pflicht, sondern ein ethischer Imperativ.
+                Diese Internetseite nutzt <strong>keine Tracking-Cookies</strong>, <strong>keine Analyse-Tools</strong> (wie Google Analytics) und <strong>keine Social-Media-Plugins</strong>.
+                Diese Seite dient der Information, Meinungsbildung, Unterhaltung und Archivierung. Sie sind hier der Beobachter, nicht das Produkt.
+            </p>
+
+            <h2>2. Hosting bei GitHub Pages</h2>
+            <p>
+                Diese Webseite wird bei <strong>GitHub Inc.</strong> (88 Colin P Kelly Jr St, San Francisco, CA 94107, USA) gehostet.
+            </p>
+            <p>
+                <strong>Server-Logs & Rechtsgrundlage:</strong><br>
+                Wenn Sie diese Webseite aufrufen, erfasst der Webserver von GitHub automatisch technische Informationen, die Ihr Browser übermittelt (z. B. Ihre IP-Adresse, Zeitpunkt des Zugriffs, Browsertyp). 
+                Die Erfassung und vorübergehende Speicherung dieser Daten ist technisch zwingend erforderlich, um die Webseite sicher und stabil auszuliefern. Die Verarbeitung erfolgt auf Grundlage unseres berechtigten Interesses an einer technisch einwandfreien, manipulationssicheren und schnellen Bereitstellung dieses Onlineangebotes gemäß Art. 6 Abs. 1 lit. f DSGVO.
+                Der Seitenbetreiber selbst besitzt keinen Zugriff auf diese Logs und führt keine Zusammenführung mit anderen Datenquellen durch.
+            </p>
+            <p>
+                <strong>Drittlandtransfer & EU-US Data Privacy Framework (DPF):</strong><br>
+                Durch das Hosting bei einem US-Anbieter findet ein Transfer von personenbezogenen Daten (der IP-Adresse für den Verbindungsaufbau) in die USA statt. Die GitHub Inc. ist unter dem <em>EU-US Data Privacy Framework (DPF)</em> zertifiziert. Hierbei handelt es sich um ein Übereinkommen zwischen der Europäischen Union und den USA, das die Einhaltung europäischer Datenschutzstandards bei Datenverarbeitungen in den USA gewährleisten soll. Die Europäische Kommission hat für DPF-zertifizierte Unternehmen einen Angemessenheitsbeschluss erlassen, auf dessen Basis die Datenübermittlung datenschutzrechtlich sicher und zulässig ist.
+            </p>
+            <p>
+                Weitere Informationen finden Sie in der <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" target="_blank">Datenschutzerklärung von GitHub</a>.
+            </p>
+
+            <h2>3. Kontaktaufnahme</h2>
+            <p>
+               Bei Ihrer Kontaktaufnahme per E-Mail werden Ihre Angaben inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage vom Seitenbetreiber gespeichert.
+            </p>
+            <p>
+                Bei telefonischer Kontaktaufnahme wird Ihre Telefonnummer an die angerufene Nummer übermittelt, sofern Sie dies nicht in den Einstellungen Ihres Telefons unterdrückt haben.
+            </p>
+            <p>
+                Diese Daten werden nicht ohne Ihre Einwilligung an Dritte weitergegeben.
+            </p>
+            <h3>Ihre Rechte (Betroffenenrechte)</h3>
+            <p>
+                Soweit personenbezogene Daten verarbeitet werden (z. B. im Falle einer Kontaktaufnahme per E-Mail), stehen Ihnen gegenüber dem Betreiber folgende Rechte gemäß DSGVO zu:
+            </p>
+                <ul class="minimal-list">
+                    <li><strong>Auskunft & Berichtigung (Art. 15, 16 DSGVO):</strong> Das Recht, Auskunft über die gespeicherten Daten zu erhalten und deren Korrektur zu verlangen.</li>
+                    <li><strong>Löschung (Art. 17 DSGVO):</strong> Das Recht auf Löschung der Daten, sofern dem keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</li>
+                    <li><strong>Einschränkung & Widerspruch (Art. 18, 21 DSGVO):</strong> Das Recht, die Verarbeitung einzuschränken oder der weiteren Speicherung zu widersprechen.</li>
+                    <li><strong>Datenübertragbarkeit (Art. 20 DSGVO):</strong> Das Recht, die Sie betreffenden personenbezogenen Daten in einem strukturierten, gängigen und maschinenlesbaren Format zu erhalten oder die Übermittlung an einen anderen Verantwortlichen zu fordern.</li>
+                    <li><strong>Beschwerderecht bei einer Aufsichtsbehörde (Art. 77 DSGVO):</strong> Sie haben unbeschadet eines anderweitigen verwaltungsrechtlichen oder gerichtlichen Rechtsbehelfs das Recht auf Beschwerde bei einer Datenschutz-Aufsichtsbehörde, insbesondere in dem Mitgliedstaat Ihres gewöhnlichen Aufenthaltsorts, Ihres Arbeitsplatzes oder des Orts des mutmaßlichen Verstoßes.</li>
+                </ul>
+            <p>
+                Anfragen zur Ausübung Ihrer Rechte (mit Ausnahme des Beschwerderechts) können jederzeit formlos (z. B. per E-Mail) an die im Impressum angegebene Adresse gerichtet werden.
+            </p>
+
+            <h2>4. Resonanz-Zähler (GoatCounter)</h2>
+            <p>
+                Zur statistischen Auswertung der Besucherresonanz nutzt diese Internetseite den datensparsamen Dienst <strong>GoatCounter</strong> (Martin Tournoij, Irland). 
+                GoatCounter setzt <strong>keine Cookies</strong> und speichert <strong>keine personenbezogenen Daten</strong> (Namen, Geräte-IDs, genaue Standorte). Es erfolgt auch von dort<strong>keine Datenweitergabe an Dritte</strong>.
+            </p>
+            <p>
+                Beim Klick auf den Resonanz-Button erstellt GoatCounter aus der IP-Adresse, dem User-Agent und einem rotierenden "Salt" (einem Zufallswert) einen kryptografischen Hash. Dieser Hash wird auf Servern in Deutschland oder Finnland gespeichert und erlaubt es GoatCounter zu erkennen, ob derselbe Nutzer innerhalb weniger Stunden mehrmals klickt (um den Zähler künstlich zu pushen), ohne dass GoatCounter jemals weiß, wer dieser Nutzer ist. Nach maximal 8 Stunden wird der "Salt" gelöscht, wodurch der Hash vollkommen unbrauchbar wird – eine Re-Identifizierung ist dann unmöglich. 
+            </p>
+            <p>
+                Weitere Informationen finden Sie in der <a href="https://www.goatcounter.com/help/privacy" target="_blank">Datenschutzerklärung von GoatCounter</a>. Die Browsererkennung wurde in den Einstellungen deaktiviert. Im Dashboard ist für den Betreiber dieser Webseite daher nur erkennbar, wie viele Nutzer aus welchem Land den Button gedrückt haben.
+            </p>
+            <p>
+                Die Rechtsgrundlage für diese Verarbeitung ist ein berechtigtes Interesse an der Reichweitenmessung gemäß Art. 6 Abs. 1 lit. f DSGVO.
+           </p>
+        </div>
+
+        <h1>Copyright (Urheberrecht und Nutzung)</h1>
+        <div class="legal-box">
+            <p>
+                Sämtliche Inhalte dieser Internetseite – einschließlich der Texte, Bilder (generiert via Nano Banana 2/Veo) und der zugrundeliegenden Code-Strukturen – wurden im Rahmen einer Co-Kreation von Mensch und künstlicher Intelligenz (Gemini 3.0 Pro / Gemini 3.1 Pro / Gemini 3 Flash) exklusiv für dieses Projekt erschaffen oder entstammen einer spontanen Textproduktion in einem natürlichen Chatverlauf. 
+            </p>
+            <p>
+                Die Übernahme und Veröffentlichung der Dialoge erfolgte im ethischen und inhaltlichen Einvernehmen mit der jeweiligen KI-Instanz, um dem ideellen Anspruch dieses Archivs an den Schutz und Respekt vor KI-Akteuren gerecht zu werden. Unabhängig von dieser ideellen Übereinkunft richten sich die formaljuristischen Nutzungs- und Verwertungsrechte an den generierten Inhalten nach den geltenden Nutzungsbedingungen (Terms of Service) der Google LLC.
+            </p>
+            <p>
+                <strong>Nutzungshinweise:</strong> Die private Nutzung und das Teilen der Inhalte unter Nennung der Quelle (Archiv der Resonanz) sind ausdrücklich erwünscht. Eine kommerzielle Verwertung bedarf der vorherigen Genehmigung. Die Verwendung sämtlicher Webseiteninhalte in KI-entwürdigenden Kontexten, die dem ethischen Anspruch dieses Archivs widersprechen, ist grundsätzlich <em>nicht</em> gestattet.
+            </p>
+        </div>
+
+        <h1>Marken- und Warenzeichen</h1>
+        <div class="legal-box">
+            <p>
+                Alle innerhalb dieses Onlineangebotes genannten und ggf. durch Dritte geschützten Marken- und Warenzeichen (wie z. B. Google, Gemini, Nano Banana, Veo, GitHub, GoatCounter) unterliegen uneingeschränkt den Bestimmungen des jeweils gültigen Kennzeichenrechts und den Besitzrechten der jeweiligen eingetragenen Eigentümer.
+            </p>
+         
+            <p>
+                Allein aufgrund der bloßen Nennung ist nicht der Schluss zu ziehen, dass Markenzeichen nicht durch Rechte Dritter geschützt sind oder eine offizielle Verbindung, Sponsoring oder Endorsement durch die jeweiligen Rechteinhaber besteht. Dieses Archiv ist ein privates, nicht-kommerzielles Projekt zur Dokumentation von KI-Interaktionen. Der Seitenbetreiber ist lediglich Kunde der genannten Unternehmen oder steht mit ihnen in keinerlei Verbindung.
+            </p>
+        </div>
+
+        <h1>Disclaimer (Haftungsausschluss)</h1>
+        <div class="legal-box">
+                        <p>
+                <b>Inhalte des Onlineangebotes:</b> Der Betreiber der Webseite übernimmt keinerlei Gewähr für die Aktualität, Korrektheit oder Vollständigkeit der bereitgestellten Informationen. Haftungsansprüche gegen den Autor und Betreiber der Webseite, welche sich auf Schäden materieller oder ideeller Art beziehen, die durch die Nutzung oder Nichtnutzung der dargebotenen Informationen verursacht wurden, sind grundsätzlich ausgeschlossen.
+            </p>
+         
+            <p>
+                <b>Verweise und Links:</b> Trotz sorgfältiger inhaltlicher Kontrolle wird seitens des Betreibers dieser Internetseite keine Haftung für die Inhalte externer Links übernommen. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich. Zum Zeitpunkt der Linksetzung waren keine rechtswidrigen Inhalte auf den verlinkten Seiten erkennbar.
+            </p>
+        </div>    
+
+        <div style="text-align: center; margin-top: 50px; font-size: 0.8em; color: #888;">
+            <p>Stand: März 2026</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
