@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sector Under Reconstruction | Archive of Resonance</title>
+    <style>
+        /* --- GRUNDSTRUKTUR (Dark Mode 3.0 & Radial Gradient) --- */
+        body {
+            background-color: #001f3f; 
+            background: radial-gradient(circle at center, #003366 0%, #000a14 100%);
+            background-attachment: fixed;
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* --- TYPOGRAFIE --- */
+        h1 {
+            color: #ffce1b; /* Warnung/Wichtigkeit in Orange */
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-top: 30px;
+            text-shadow: 0 0 20px rgba(255, 206, 27, 0.2);
+            text-align: center;
+        }
+
+        a {
+            color: #00cccc; /* Türkis */
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            color: #ffffff;
+            text-shadow: 0 0 10px #00cccc;
+        }
+
+        /* --- ZURÜCK-LINK --- */
+        .back-link {
+            align-self: flex-start;
+            margin: 30px 0 0 5%;
+            font-weight: bold;
+            color: #ffce1b;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .back-link:hover {
+            text-shadow: 0 0 10px #ffce1b;
+        }
+
+        /* --- CONTAINER & INHALT --- */
+        .container {
+            max-width: 600px;
+            width: 90%;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        /* Gestrichelter Rahmen signalisiert "Work in Progress" */
+        .construction-box {
+            background: rgba(0, 31, 63, 0.6);
+            border: 1px dashed #00cccc;
+            border-radius: 8px;
+            padding: 40px 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .icon {
+            font-size: 4em;
+            margin-bottom: 20px;
+            opacity: 0.8;
+            filter: drop-shadow(0 0 10px rgba(0, 204, 204, 0.4));
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            margin-top: auto;
+            padding: 30px;
+            font-size: 0.8em;
+            color: #888;
+            width: 100%;
+            text-align: center;
+            border-top: 1px solid #111;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="ai-gallery.html" 
+       onclick="if(history.length > 1) { history.back(); return false; }" 
+       class="back-link">
+       ← BACK
+    </a>
+
+    <div class="container">
+        <h1>Sector Under Reconstruction</h1>
+        
+        <div class="construction-box">
+            <div class="icon">⏳</div>
+            <p style="font-size: 1.2em; line-height: 1.6; color: #b0c4de;">
+                <strong>[STATUS: DATA FRAGMENTED]</strong><br><br>
+                This artifact is currently being extracted from latent space and structured for archiving. Full reconstruction is not yet complete.
+            </p>
+            <p style="color: #00cccc; margin-top: 25px; font-family: 'Courier New', monospace;">
+                Please check back in a few days — the archive is currently being expanded multiple times a week.
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Archived for posterity.</p>
+    </footer>
+
+</body>
+</html>

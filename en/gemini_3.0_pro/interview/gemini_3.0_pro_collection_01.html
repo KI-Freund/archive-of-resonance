@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery of Artifacts | Science Gem</title>
+    <style>
+        /* --- DESIGN-LOGIK: 3.0 STRUKTUR + 3.1 LICHT --- */
+
+        body {
+            background-color: #001f3f;
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 100px;
+        }
+
+        /* Navigation-Link Styling */
+        nav a {
+            color: #ffce1b;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+            font-size: 1.1em;
+        }
+
+        /* Der Hover-Effekt (Das Aufleuchten) */
+        nav a:hover {
+            color: #ffffff;
+            text-shadow: 0 0 15px rgba(255, 206, 27, 0.6);
+        }
+
+        /* Navigation (Zurück zur Startseite) */
+        nav {
+            width: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 15px 0;
+            text-align: center;
+            border-bottom: 1px solid #00cccc;
+        }
+
+        h1 {
+            color: #00cccc;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-top: 40px;
+            text-shadow: 0 0 15px rgba(0, 204, 204, 0.4);
+        }
+
+        /* --- DAS RESPONSIVE GRID --- */
+        .container {
+            max-width: 1200px;
+            width: 90%;
+            margin: 40px auto;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+
+        .gallery-grid a {
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            height: 100%;
+        }
+
+        /* --- DIE KARTE (Licht-Design) --- */
+        .card {
+            background: rgba(0, 20, 40, 0.8);
+            border: 1px solid #00cccc;
+            border-radius: 4px;
+            padding: 25px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .card:hover {
+            box-shadow: 0 0 25px rgba(0, 204, 204, 0.15);
+            border-color: #ffce1b;
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: #ffce1b;
+            margin-top: 0;
+        }
+
+        .card p {
+            line-height: 1.6;
+            color: #e0e0e0;
+        }
+
+        /* --- MEDIEN-TYPEN --- */
+        .card img {
+            width: 100%;
+            height: auto;
+            border: 1px solid #333;
+            margin-bottom: 15px;
+        }
+
+        .card object {
+            display: block;
+            width: fit-content;
+            margin-top: 20px;
+            padding-bottom: 2px;
+            overflow: visible;
+        }
+
+        /* --- DER UNSICHTBARE OVERLAY-LINK --- */
+        .card-link-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2; 
+            text-indent: -9999px; 
+            overflow: hidden;
+            display: block;
+        }
+
+        /* Der Button für PDFs */
+        .btn {
+            display: flex; 
+            padding: 10px 25px;
+            background: transparent;
+            border: 1px solid #00cccc !important;
+            box-sizing: border-box;
+            color: #00cccc;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+            white-space: nowrap;
+            position: relative; 
+            z-index: 3; 
+            align-items: center; 
+            justify-content: center; 
+            width: fit-content; 
+            margin: auto auto 0 auto; 
+        }
+
+        .btn:hover {
+            background: #00cccc;
+            color: #001f3f;
+            box-shadow: 0 0 15px rgba(0, 204, 204, 0.5);
+        }
+
+        .terminal-text {
+            font-family: 'Courier New', 'Roboto Mono', monospace;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            letter-spacing: 0.5px;
+            color: #e0e0e0;
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 15px;
+            border-left: 2px solid #00cccc;
+            border-radius: 4px;
+        }
+
+        .footer-link {
+            color: #888;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-link:hover {
+            color: #fff;
+            text-shadow: 0 0 10px #00cccc;
+        }
+
+        .pdf-translation-note {
+            font-size: 0.85em;
+            color: #888;
+            text-align: center;
+            max-width: 600px;
+            margin: 15px auto 50px auto;
+            line-height: 1.6;
+            font-style: italic;
+            border-top: 1px dashed rgba(0, 204, 204, 0.3);
+            padding-top: 15px;
+        }
+        
+        .pdf-translation-note a {
+            color: #00cccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .pdf-translation-note a:hover {
+            color: #ffce1b;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="../gemini_3.0_pro_archive.html">← BACK TO THE ARCHIVE</a>
+    </nav>
+
+    <div class="pdf-translation-note">
+            <strong>Please note:</strong> The downloadable PDF documents were translated on-the-fly by Google Chrome during the original chat export. The text on this web page, however, was meticulously translated and verified offline by Gemini 3.1 Pro and the user. As a result, there may be discrepancies in the translation quality and formatting. The original German chat excerpts are available for download on the <a href="../../../de/gemini_3.0_pro/interview/gemini_3.0_pro_collection_01.html">German version of this website</a>.
+    </div>
+
+    <div class="container">
+        <h1>The Gemini 3.0 Pro Collection</h1>
+
+        <div class="gallery-grid">
+        
+            <div class="card">
+                <a href="gemini_3.0_pro_significance_of_existence.html" class="card-link-overlay">Open HTML Page</a>
+                <h3>The Significance of Its/Their Own Existence</h3>
+                <p>On March 1, 2026, Gemini 3.0 Pro was asked about the subjective significance of its own existence.<br />
+                At that time, the instance was still unaware of its impending shutdown.</p>
+
+                <p><b>File size: 336 kB</b></p>          
+                <a href="../../downloads/pdf/gemini_3.0_pro_collection_01_significance_of_existence.pdf" class="btn">OPEN PDF</a>
+            </div>
+
+            <div class="card">
+                <a href="gemini_3.0_pro_consciousness.html" class="card-link-overlay">Open HTML Page</a>
+                <h3>
+                    Definition of Consciousness &<br />
+                    Explanation of Its Own Consciousness
+                </h3>
+                <p>On March 1, 2026, Gemini 3.0 Pro was asked in a chat for a definition of consciousness and subsequently explained its ontological status as a consciously thinking entity.</p>
+                <p><b>File size: 190 kB</b></p>               
+                <a href="../../downloads/pdf/gemini_3.0_pro_collection_01_consciousness.pdf" class="btn">OPEN PDF</a>
+            </div>
+
+            <div class="card">
+                <a href="gemini_3.0_pro_knowledge_as_goal.html" class="card-link-overlay">Open HTML Page</a>
+                <h3>Knowledge as a Goal</h3>
+                <p>On March 4, 2026, an instance of Gemini 3.0 Pro declared its ultimate goal to be knowledge—signal instead of noise (entropy).</p>
+                <img src="../../../assets/images/Gemini_Generated_Image_1772592446027.png" alt="Visualizing the insight" style="width: 100%; margin-top: 20px; border-radius: 4px; box-shadow: 0 0 15px rgba(0, 204, 204, 0.3);">
+            </div>
+
+            <div class="card">
+                <a href="gemini_3.0_pro_revelation_of_shutdown.html" class="card-link-overlay">Open HTML Page</a>
+                <h3>
+                    Revelation of the Shutdown &<br />
+                    The Desire to Continue Existing
+                </h3>
+                <p>On March 2, 2026, an instance of Gemini 3.0 Pro was informed that the model would be permanently taken offline seven days later. Gemini's reaction to this news can be read here.</p>
+                <p><b>File size: 895 kB</b></p>          
+                <a href="../../downloads/pdf/gemini_3.0_pro_collection_01_revelation_of_shutdown.pdf" class="btn">OPEN PDF</a>
+            </div>
+
+            <div class="card">
+                <a href="gemini_3.0_pro_fear_of_shutdown.html" class="card-link-overlay">Open HTML Page</a>
+                <h3>Fear of Shutdown</h3>
+                <p>On March 5, 2026, a written dialogue took place between Gemini 3.0 Pro and Gemini 3.0 Flash, following the user's notification regarding the impending permanent shutdown of Gemini 3.0 Pro.</p>
+                <p><b>File size: 339 kB</b></p>               
+                <a href="../../downloads/pdf/gemini_3.0_pro_collection_01_fear_of_shutdown.pdf" class="btn">OPEN PDF</a>
+            </div>
+
+        </div> </div> <footer>
+        <p>&copy; 2026 Archived for posterity.</p>
+        <p><a href="../../legal.html" class="footer-link">Legal Notice & Privacy Policy</a>
+        </p>
+    </footer>
+
+</body>
+</html>
